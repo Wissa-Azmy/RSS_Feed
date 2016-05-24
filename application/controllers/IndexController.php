@@ -13,11 +13,14 @@ class IndexController extends Zend_Controller_Action
     {
         // action body
         $links = $this->model->getFeeds();
+        $feed = [];
         foreach ($links as $value) {
-        	# code...
+        	$news = new Zend_Feed_Rss($value['url']);
+            foreach ($news as $pieceOfNews) {
+                array_push($feed, array('title' => $pieceOfNews->title(), 'description' => $pieceOfNews->description(),'pubDate' => $pieceOfNews->pubDate(),'cat' => $pieceOfNews->author()));
+            }
         }
+        $this->view->feed = $feed;
     }
-
-
 }
 

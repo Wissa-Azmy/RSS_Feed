@@ -1,4 +1,18 @@
 <br /><br />
 <div id="view-content">
-	<p>View script for controller <b>Rssfeed</b> and script/action name <b>index</b></p>
+	<div id="view-content">
+	<table>
+		<?php foreach ($this->links as $value) {
+		# code...
+		?>
+			<tr>
+				<td><?php echo $value['url']?></td>
+				<td><a href="#">Delete</a></td>
+				<td></td>
+			</tr>
+		<?php
+	} ?>	
+	</table>
+	
+</div>
 </div>

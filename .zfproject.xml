@@ -15,6 +15,9 @@
           <actionMethod actionName="index"/>
           <actionMethod actionName="add"/>
         </controllerFile>
+        <controllerFile controllerName="Rssfeed">
+          <actionMethod actionName="index"/>
+        </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="AddUrl"/>
@@ -39,6 +42,12 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="Rss">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Rssfeed">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="add">
             <viewScriptFile forActionName="add"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>

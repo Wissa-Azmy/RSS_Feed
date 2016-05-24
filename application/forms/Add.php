@@ -1,6 +1,6 @@
 <?php
 
-class Application_Form_AddUrl extends Zend_Form
+class Application_Form_Add extends Zend_Form
 {
 
     public function init()
@@ -8,8 +8,8 @@ class Application_Form_AddUrl extends Zend_Form
         /* Form Elements & Other Definitions Here ... */
         $url = new Zend_Form_Element_Text('url');
         $url -> setLabel('url');
-        $sumbit = Zend_Form_Element_Submit('submit');
-        $this-> addElements(array($url, $submit));
+        $sumbit = new Zend_Form_Element_Submit('submit');
+        $this-> addElements(array($url, $sumbit));
     }
 
 

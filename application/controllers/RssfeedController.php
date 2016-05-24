@@ -38,6 +38,14 @@ class RssfeedController extends Zend_Controller_Action
         $this->view->form = $form;
     }
 
+    public function deleteAction($id)
+    {
+        # code...
+        $id = $this->getRequest()->getParam('id');
+        $this->model->deleteUrl($id);
+        $this->redirect('rssfeed/');
+    }
+
 
 }
 

@@ -16,5 +16,9 @@ class Application_Model_DbTable_Rss extends Zend_Db_Table_Abstract
 		$row->url = $input;
 		return $row->save();
 	}	
+
+    function deleteUrl($id){
+        return $this->delete('id='.$id);
+    }
 }
 
